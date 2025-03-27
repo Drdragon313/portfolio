@@ -14,7 +14,7 @@ import services_logo1 from "./assets/images/Services/logo1.png";
 import services_logo2 from "./assets/images/Services/webapp.png";
 import services_logo3 from "./assets/images/Services/medtech.png";
 
-import project1 from "./assets/images/projects/caresync.png";
+import project1 from "./assets/images/Projects/caresync.png";
 import project2 from "./assets/images/projects/bookly.png";
 import project3 from "./assets/images/projects/pharmytics.png";
 import person_project from "./assets/images/projects/person.png";
