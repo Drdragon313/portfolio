@@ -15,9 +15,8 @@ import services_logo2 from "./assets/images/Services/webapp.png";
 import services_logo3 from "./assets/images/Services/medtech.png";
 
 import project1 from "./assets/images/Projects/caresync.png";
-import project2 from "./assets/images/projects/bookly.png";
-import project3 from "./assets/images/projects/pharmytics.png";
-import person_project from "./assets/images/projects/person.png";
+import project2 from "./assets/images/Projects/bookly.png";
+import project3 from "./assets/images/Projects/pharmytics.png";
 
 import avatar1 from "./assets/images/Testimonials/avatar1.png";
 import avatar2 from "./assets/images/Testimonials/avatar2.png";
@@ -148,7 +147,6 @@ export const content = {
 	Projects: {
 		title: "Projects",
 		subtitle: "MY CREATION",
-		image: person_project,
 		project_content: [
 			{
 				title: "CareSync",
