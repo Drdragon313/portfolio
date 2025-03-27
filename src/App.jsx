@@ -13,29 +13,29 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const App = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1800,
-      offset: 100,
-      disable: "mobile",
-    });
-  }, []);
-  return (
-    <div className="">
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Service />
-      <Projects />
-      <Testimonials />
-      <Hireme />
-      <Contact />
-      <footer className="p-3 text-center">
-        <h6 className="mb-3">JOHN ALEX</h6>
-        <p>codeaprogram © All CopyRights Reserved 2022</p>
-      </footer>
-    </div>
-  );
+	useEffect(() => {
+		Aos.init({
+			duration: 1800,
+			offset: 100,
+			disable: "mobile"
+		});
+	}, []);
+	return (
+		<div className="">
+			<Navbar />
+			<Hero />
+			<Skills />
+			<Service />
+			<Projects />
+			<Testimonials />
+			<Hireme />
+			<Contact />
+			<footer className="p-3 text-center">
+				<h6 className="mb-3">Muhammad Ahmed</h6>
+				<p>Drdragon313 © All CopyRights Reserved 2025</p>
+			</footer>
+		</div>
+	);
 };
 
 export default App;
