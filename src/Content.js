@@ -67,10 +67,10 @@ export const content = {
 		hero_content: [
 			{
 				count: "2+",
-				text: "Years of Experinse in Web development"
+				text: "Years of Experience in Web development"
 			},
 			{
-				count: "10+",
+				count: "20+",
 				text: "Projects Worked in my career"
 			}
 		]
@@ -171,27 +171,27 @@ export const content = {
 		testimonials_content: [
 			{
 				review:
-					"“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+					"“Working with Muhammad Ahmed was a game-changer for our business. They built our web app using Next.js, making it super fast and SEO-friendly. The user experience is smooth, and our customers love it!”",
 				img: avatar1,
-				name: "JOHN DOE"
+				name: "Logan James"
 			},
 			{
 				review:
-					"“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+					"“Our online store was struggling with performance issues, but Muhammad AHmed optimized everything with React and Next.js. Now, our site loads instantly, and conversions have increased by 40%! Truly a top-tier developer”",
 				img: avatar2,
-				name: "Tom Alex"
+				name: "Salman Mehdi"
 			},
 			{
 				review:
-					"“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+					"“Our medtech platform required a complex web app, and Muhammad Ahmed nailed it. They built a fast, secure, and user-friendly solution with Next.js. Their problem-solving skills and professionalism were impressive!”",
 				img: avatar3,
-				name: "Johnny"
+				name: "Pyramid Pharmacy"
 			},
 			{
 				review:
-					"“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+					"“We needed a scalable dashboard for our SaaS product, and Muhammad Ahmed delivered beyond expectations. The React-based UI is sleek, responsive, and easy to use. Highly recommend their expertise!”",
 				img: avatar4,
-				name: "ROBBIN"
+				name: "Strategic Innovative Engineering"
 			}
 		]
 	},

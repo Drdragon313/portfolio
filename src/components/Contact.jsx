@@ -7,31 +7,30 @@ const Contact = () => {
 	const { Contact } = content;
 	const form = useRef();
 
-	// Sending Email
-	const sendEmail = (e) => {
-		e.preventDefault();
+	// const sendEmail = (e) => {
+	// 	e.preventDefault();
 
-		emailjs
-			.sendForm(
-				"service_ia6cauo",
-				"template_s51mxif",
-				form.current,
-				"JeBesFhdiBI4RSgQ_"
-			)
-			.then(
-				(result) => {
-					console.log(result.text);
-					// Clear all input field values
-					form.current.reset();
-					// Success toast message
-					toast.success("Email send Successfully");
-				},
-				(error) => {
-					console.log(error.text);
-					toast.error(error.text);
-				}
-			);
-	};
+	// 	emailjs
+	// 		.sendForm(
+	// 			"service_ia6cauo",
+	// 			"template_s51mxif",
+	// 			form.current,
+	// 			"JeBesFhdiBI4RSgQ_"
+	// 		)
+	// 		.then(
+	// 			(result) => {
+	// 				console.log(result.text);
+	// 				// Clear all input field values
+	// 				form.current.reset();
+	// 				// Success toast message
+	// 				toast.success("Email send Successfully");
+	// 			},
+	// 			(error) => {
+	// 				console.log(error.text);
+	// 				toast.error(error.text);
+	// 			}
+	// 		);
+	// };
 
 	return (
 		<section className="bg-dark_primary text-white" id="contact">
@@ -45,13 +44,12 @@ const Contact = () => {
 				</h4>
 				<br />
 				<div className="flex gap-10 md:flex-row flex-col">
-					<form
+					{/* <form
 						ref={form}
 						onSubmit={sendEmail}
 						data-aos="fade-up"
 						className="flex-1 flex flex-col gap-5"
 					>
-						{/* Input Name as same as email js templates values */}
 						<input
 							type="text"
 							name="from_name"
@@ -79,7 +77,7 @@ const Contact = () => {
 						>
 							Submit
 						</button>
-					</form>
+					</form> */}
 					<div className="flex-1 flex flex-col gap-5">
 						{Contact.social_media.map((content, i) => (
 							<div
