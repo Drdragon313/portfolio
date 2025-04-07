@@ -17,6 +17,8 @@ import services_logo3 from "./assets/images/Services/medtech.png";
 import project1 from "./assets/images/Projects/caresync.png";
 import project2 from "./assets/images/Projects/bookly.png";
 import project3 from "./assets/images/Projects/pharmytics.png";
+import project4 from "./assets/images/Projects/careflow.png";
+import project5 from "./assets/images/Projects/copilot.png";
 
 import avatar1 from "./assets/images/Testimonials/avatar1.png";
 import avatar2 from "./assets/images/Testimonials/avatar2.png";
@@ -146,22 +148,42 @@ export const content = {
 	},
 	Projects: {
 		title: "Projects",
-		subtitle: "MY CREATION",
+		subtitle: "SOME OF MY CREATIONS",
 		project_content: [
 			{
 				title: "CareSync",
 				image: project1,
-				link: "https://dev-caresync.31g.co.uk/"
+				link: "https://dev-caresync.31g.co.uk/",
+				descriptions:
+					"A healthcare application integrated with the UK's NHS systems for efficient medical data exchange. Focused on user accessibility and intuitive navigation tailored to diverse NHS user needs."
 			},
 			{
 				title: "Bookly",
 				image: project2,
-				link: "https://dev-bookly.31g.co.uk/"
+				link: "https://dev-bookly.31g.co.uk/",
+				descriptions:
+					"A FinTech application designed to read, analyze, and store financial records from scanned documents. Extracted data from official documents like licenses and displayed it in structured, tabular form. Focused on accuracy and ease of access to critical financial data."
 			},
 			{
 				title: "Pharmlytics",
 				image: project3,
-				link: "https://pharmlytics.co.uk/"
+				link: "https://pharmlytics.co.uk/",
+				descriptions:
+					"A Pharmacy Management System built for a UK-based chain, developed using React.js and Power BI. Led frontend development and implemented role-based access control. Integrated dynamic Power BI dashboards for actionable insights and data-driven decision-making."
+			},
+			{
+				title: "Careflow",
+				image: project4,
+				link: "https://dev-formbuilder.31g.co.uk/auth/login",
+				descriptions:
+					"A workflow builder application where the workflows, forms, layouts and themes can be made without coding. Extremely usefull for organizational level architecture design or for creating forms."
+			},
+			{
+				title: "CareCopilot",
+				image: project5,
+				link: "https://dev-carecopilot.31g.co.uk/auth/login",
+				descriptions:
+					"A SaaS application that acts as a service to access three different application using SSO. Allows creating and editing roles and their access controls dynamically. "
 			}
 		]
 	},
@@ -171,25 +193,25 @@ export const content = {
 		testimonials_content: [
 			{
 				review:
-					"“Working with Muhammad Ahmed was a game-changer for our business. They built our web app using Next.js, making it super fast and SEO-friendly. The user experience is smooth, and our customers love it!”",
+					"“Working with Muhammad Ahmed and his team was a game-changer for our business. They built our web app using Next.js, making it super fast and SEO-friendly. The user experience is smooth, and our customers love it!”",
 				img: avatar1,
 				name: "Logan James"
 			},
 			{
 				review:
-					"“Our online store was struggling with performance issues, but Muhammad AHmed optimized everything with React and Next.js. Now, our site loads instantly, and conversions have increased by 40%! Truly a top-tier developer”",
+					"“Our online store was struggling with performance issues, but Muhammad Ahmed and his team optimized everything with React and Next.js. Now, our site loads instantly, and conversions have increased by 40%! Truly a top-tier developer”",
 				img: avatar2,
 				name: "Salman Mehdi"
 			},
 			{
 				review:
-					"“Our medtech platform required a complex web app, and Muhammad Ahmed nailed it. They built a fast, secure, and user-friendly solution with Next.js. Their problem-solving skills and professionalism were impressive!”",
+					"“Our medtech platform required a complex web app, and Muhammad Ahmed and his team nailed it. They built a fast, secure, and user-friendly solution with Next.js. Their problem-solving skills and professionalism were impressive!”",
 				img: avatar3,
 				name: "Pyramid Pharmacy"
 			},
 			{
 				review:
-					"“We needed a scalable dashboard for our SaaS product, and Muhammad Ahmed delivered beyond expectations. The React-based UI is sleek, responsive, and easy to use. Highly recommend their expertise!”",
+					"“We needed a scalable dashboard for our SaaS product, and Muhammad Ahmed and his team delivered beyond expectations. The React-based UI is sleek, responsive, and easy to use. Highly recommend their expertise!”",
 				img: avatar4,
 				name: "Strategic Innovative Engineering"
 			}

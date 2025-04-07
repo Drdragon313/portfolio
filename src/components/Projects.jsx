@@ -54,6 +54,7 @@ const Projects = () => {
 									>
 										Live Preview
 									</a>
+									<p>{content.descriptions}</p>
 								</div>
 							</SwiperSlide>
 						))}
