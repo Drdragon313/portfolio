@@ -1,6 +1,4 @@
-// import images
 import Hero_person from "./assets/images/Hero/new crop person.png";
-
 import html from "./assets/images/Skills/HTML5.png";
 import redux from "./assets/images/Skills/redux.png";
 import js from "./assets/images/Skills/jslogo.png";
