@@ -43,19 +43,20 @@ const Projects = () => {
 								key={i}
 								className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit"
 							>
-								<img src={content.image} alt="..." />
-								<div className="flex flex-col gap-1 mt-2">
-									<h5 className="font-bold font-Poppins">{content.title}</h5>
-									<a
-										href={content.link}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="font-bold text-gray self-end"
-									>
-										Live Preview
-									</a>
-									<p>{content.descriptions}</p>
-								</div>
+								<a
+									href={content.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="font-bold text-gray self-end"
+								>
+									<img src={content.image} alt="..." />
+									<div className="flex flex-col gap-1 mt-2">
+										<h5 className="font-bold font-Poppins">{content.title}</h5>
+										<p className="font-Poppins font-normal text-sm text-gray-600">
+											{content.descriptions}
+										</p>
+									</div>
+								</a>
 							</SwiperSlide>
 						))}
 					</Swiper>

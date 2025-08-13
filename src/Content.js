@@ -7,6 +7,10 @@ import nodejs from "./assets/images/Skills/node.png";
 import tailwind from "./assets/images/Skills/tailwind.png";
 import next from "./assets/images/Skills/next.png";
 import bi from "./assets/images/Skills/bi.png";
+import mui from "./assets/images/Skills/muilogo.png";
+import git from "./assets/images/Skills/git-logo.png";
+import typescript from "./assets/images/Skills/typescript-logo.png";
+import auth from "./assets/images/Skills/auth-logo.png";
 
 import services_logo1 from "./assets/images/Services/logo1.png";
 import services_logo2 from "./assets/images/Services/webapp.png";
@@ -15,7 +19,7 @@ import services_logo3 from "./assets/images/Services/medtech.png";
 import project1 from "./assets/images/Projects/caresync.png";
 import project2 from "./assets/images/Projects/bookly.png";
 import project3 from "./assets/images/Projects/pharmytics.png";
-import project4 from "./assets/images/Projects/careflow.png";
+import project4 from "./assets/images/Projects/caremetrix.png";
 import project5 from "./assets/images/Projects/copilot.png";
 
 import avatar1 from "./assets/images/Testimonials/avatar1.png";
@@ -116,6 +120,26 @@ export const content = {
 				logo: next
 			},
 			{
+				name: "Material UI",
+				// para: "Lorem ipsum text  dummy",
+				logo: mui
+			},
+			{
+				name: "Git Version Control",
+				// para: "Lorem ipsum text  dummy",
+				logo: git
+			},
+			{
+				name: "Typescript",
+				// para: "Lorem ipsum text  dummy",
+				logo: typescript
+			},
+			{
+				name: "Auth0",
+				// para: "Lorem ipsum text  dummy",
+				logo: auth
+			},
+			{
 				name: "Power BI",
 				// para: "Lorem ipsum text  dummy",
 				logo: bi
@@ -170,11 +194,11 @@ export const content = {
 					"A Pharmacy Management System built for a UK-based chain, developed using React.js and Power BI. Led frontend development and implemented role-based access control. Integrated dynamic Power BI dashboards for actionable insights and data-driven decision-making."
 			},
 			{
-				title: "Careflow",
+				title: "Caremetrix",
 				image: project4,
-				link: "https://dev-formbuilder.31g.co.uk/auth/login",
+				link: "https://app.dev.caremetrix.31g.co.uk/",
 				descriptions:
-					"A workflow builder application where the workflows, forms, layouts and themes can be made without coding. Extremely usefull for organizational level architecture design or for creating forms."
+					"A MedTech web application designed to streamline healthcare workflows. Developed using React.js, it features a user-friendly interface for managing practices, employees, and medical records. Focused on enhancing operational efficiency and improving patient care through technology."
 			},
 			{
 				title: "CareCopilot",
