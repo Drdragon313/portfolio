@@ -1,96 +1,44 @@
-import { createElement, useRef } from "react";
+import { createElement } from "react";
 import { content } from "../Content";
-import emailjs from "@emailjs/browser";
-import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
 	const { Contact } = content;
-	const form = useRef();
-
-	// const sendEmail = (e) => {
-	// 	e.preventDefault();
-
-	// 	emailjs
-	// 		.sendForm(
-	// 			"service_ia6cauo",
-	// 			"template_s51mxif",
-	// 			form.current,
-	// 			"JeBesFhdiBI4RSgQ_"
-	// 		)
-	// 		.then(
-	// 			(result) => {
-	// 				console.log(result.text);
-	// 				// Clear all input field values
-	// 				form.current.reset();
-	// 				// Success toast message
-	// 				toast.success("Email send Successfully");
-	// 			},
-	// 			(error) => {
-	// 				console.log(error.text);
-	// 				toast.error(error.text);
-	// 			}
-	// 		);
-	// };
 
 	return (
-		<section className="bg-dark_primary text-white" id="contact">
-			<Toaster />
-			<div className="md:container px-5 py-14">
-				<h2 className="title !text-white" data-aos="fade-down">
+		<section className="bg-dark_primary py-16 border-t border-charcoal_border/40" id="contact">
+			<div className="max-w-6xl mx-auto px-6">
+				<h2 className="title" data-aos="fade-down">
 					{Contact.title}
 				</h2>
 				<h4 className="subtitle" data-aos="fade-down">
 					{Contact.subtitle}
 				</h4>
 				<br />
-				<div className="flex gap-10 md:flex-row flex-col">
-					{/* <form
-						ref={form}
-						onSubmit={sendEmail}
-						data-aos="fade-up"
-						className="flex-1 flex flex-col gap-5"
-					>
-						<input
-							type="text"
-							name="from_name"
-							placeholder="Name"
-							required
-							className="border border-slate-600 p-3 rounded"
-						/>
-						<input
-							type="email"
-							name="user_email"
-							pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-							placeholder="Email Id"
-							required
-							className="border border-slate-600 p-3 rounded"
-						/>
-						<textarea
-							name="message"
-							placeholder="Message"
-							className="border border-slate-600 p-3 rounded h-44"
-							required
-						></textarea>
-						<button
-							className="btn self-start
-            bg-white text-dark_primary"
-						>
-							Submit
-						</button>
-					</form> */}
-					<div className="flex-1 flex flex-col gap-5">
-						{Contact.social_media.map((content, i) => (
-							<div
+				
+				<div className="mt-8 flex justify-center w-full">
+					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
+						{Contact.social_media.map((item, i) => (
+							<a
 								key={i}
-								data-aos="fade-down"
-								data-aos-delay={i * 430}
-								className="flex items-center gap-2"
+								href={item.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								data-aos="fade-up"
+								data-aos-delay={i * 100}
+								className="flex flex-col items-center gap-4 p-6 bg-charcoal_card/50 backdrop-blur-sm border border-charcoal_border rounded-2xl hover:border-neon_cyan/40 hover:shadow-[0_0_15px_rgba(0,243,255,0.12)] transition-all duration-300 group text-center"
 							>
-								<h4 className="text-white">{createElement(content.icon)}</h4>
-								<a className="font-Poppins" href={content.link} target="_blank">
-									{content.text}
-								</a>
-							</div>
+								<div className="w-12 h-12 rounded-xl bg-dark_primary/80 border border-charcoal_border flex items-center justify-center text-slate-400 group-hover:text-neon_cyan group-hover:border-neon_cyan/30 duration-300 text-2xl shadow-sm">
+									{createElement(item.icon)}
+								</div>
+								<div className="flex flex-col items-center justify-center">
+									<span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase block mb-1">
+										{item.text === "LinkedIn" || item.text === "GitHub" ? "Social" : "Direct"}
+									</span>
+									<span className="font-Poppins font-semibold text-slate-300 group-hover:text-white text-xs md:text-sm break-all leading-normal">
+										{item.text}
+									</span>
+								</div>
+							</a>
 						))}
 					</div>
 				</div>

@@ -1,74 +1,14 @@
-// import content
-import { createElement, useState } from "react";
+import { useState } from "react";
 import { content } from "../Content";
-// import modal package
-import Modal from "react-modal";
-
-const customStyles = {
-	content: {
-		top: "50%",
-		left: "50%",
-		right: "auto",
-		bottom: "auto",
-		marginRight: "-50%",
-		transform: "translate(-50%, -50%)",
-		maxWidth: "23rem",
-		width: "90%"
-	},
-	overlay: {
-		padding: "2rem"
-	}
-};
-Modal.setAppElement("#root");
 
 const Skills = () => {
 	const { skills } = content;
-	const [modalIsOpen, setIsOpen] = useState(false);
-	const [selectSkill, setSelectSkill] = useState(null);
-
-	function openModal() {
-		setIsOpen(true);
-	}
-
-	function closeModal() {
-		setIsOpen(false);
-	}
+	const [activeCategory, setActiveCategory] = useState(0);
 
 	return (
-		<section className="min-h-fit bg-bg_light_primary" id="skills">
-			{/* modal */}
-			<Modal
-				isOpen={modalIsOpen}
-				onRequestClose={closeModal}
-				style={customStyles}
-			>
-				<div className="flex items-center gap-2">
-					<img className="h-10" src={selectSkill?.logo} alt="..." />
-					<h6>{selectSkill?.name}</h6>
-				</div>
-				<br />
-				<ul className="list-decimal px-4 font-Poppins sm:text-sm text-xs !leading-7">
-					<li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
-					<li>Lorem ipsum dolor sit, ame.</li>
-					<li>Lorem ipsum dolor sit, amet consectetur</li>
-					<li>
-						Lorem ipsum dolor sit, amet dolor sit, amet consectetur adipisicing.
-					</li>
-					<li>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad est
-						beatae quos rem.
-					</li>
-				</ul>
-				<br />
-				<div className="flex justify-end">
-					<button onClick={closeModal} className="btn">
-						Close
-					</button>
-				</div>
-			</Modal>
-
+		<section className="bg-dark_primary py-16" id="skills">
 			{/* content */}
-			<div className="md:container px-5  py-14">
+			<div className="max-w-6xl mx-auto px-6">
 				<h2 className="title" data-aos="fade-down">
 					{skills.title}
 				</h2>
@@ -76,35 +16,46 @@ const Skills = () => {
 					{skills.subtitle}
 				</h4>
 				<br />
-				<div className="flex flex-wrap gap-4 justify-center">
-					{skills.skills_content.map((skill, i) => (
+
+				{/* Category Tabs */}
+				<div className="flex flex-wrap gap-2.5 sm:gap-3 justify-center mb-10" data-aos="fade-down">
+					{skills.categories.map((cat, i) => (
+						<button
+							key={i}
+							onClick={() => setActiveCategory(i)}
+							className={`px-3 py-1.5 sm:px-5 sm:py-2 rounded-full font-mono text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 border
+								${
+									activeCategory === i
+										? "bg-neon_cyan text-dark_primary border-neon_cyan shadow-neon scale-105"
+										: "bg-charcoal_card text-slate-400 border-charcoal_border hover:text-white hover:border-slate-600"
+								}
+							`}
+						>
+							{cat.name}
+						</button>
+					))}
+				</div>
+
+				{/* Skills Grid */}
+				<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
+					{skills.categories[activeCategory].skills.map((skill, i) => (
 						<div
 							key={i}
 							data-aos="fade-up"
-							data-aos-delay={i * 100}
-							className="bg-white sm:cursor-pointer 
-               relative group w-full flex items-center
-                gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200"
+							data-aos-delay={i * 50}
+							className="bg-charcoal_card/50 sm:cursor-pointer relative group flex flex-col sm:flex-row items-center gap-3 sm:gap-4 p-4 rounded-xl border border-charcoal_border hover:border-neon_cyan/30 hover:shadow-[0_0_15px_rgba(0,241,254,0.12)] transition-all duration-300 text-center sm:text-left"
 						>
-							<div>
+							<div className="w-12 h-12 flex items-center justify-center bg-dark_primary/80 rounded-lg p-2 border border-charcoal_border group-hover:border-neon_cyan/20 duration-300 shrink-0">
 								<img
 									src={skill.logo}
-									alt="..."
-									className="w-10 group-hover:scale-125 duration-200"
+									alt={skill.name}
+									className="max-w-full max-h-full object-contain group-hover:scale-110 duration-300"
 								/>
 							</div>
 							<div>
-								<h6>{skill.name}</h6>
-								<p className="italic">{skill.para}</p>
-								{/* <div
-                  onClick={() => {
-                    setSelectSkill(skill);
-                    openModal();
-                  }}
-                  className="text-xl absolute top-3 right-3"
-                >
-                  {createElement(skills.icon)}
-                </div> */}
+								<h6 className="text-white font-bold font-Poppins text-xs sm:text-sm leading-snug">
+									{skill.name}
+								</h6>
 							</div>
 						</div>
 					))}
